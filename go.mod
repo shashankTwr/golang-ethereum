@@ -2,7 +2,10 @@ module go-ethereum
 
 go 1.22.2
 
-require github.com/ethereum/go-ethereum v1.14.12
+require (
+	github.com/ethereum/go-ethereum v1.14.12
+	github.com/joho/godotenv v1.5.1
+)
 
 require (
 	github.com/Microsoft/go-winio v0.6.2 // indirect
