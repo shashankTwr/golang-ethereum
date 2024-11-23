@@ -1,0 +1,3 @@
+[submodule "learn/07-/contracts/lib/forge-std"]
+	path = learn/07-/contracts/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
