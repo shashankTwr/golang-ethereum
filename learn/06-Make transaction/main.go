@@ -9,6 +9,7 @@ import (
 
 	"github.com/ethereum/go-ethereum/accounts/keystore"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/ethclient"
@@ -221,7 +222,11 @@ func main()  {
 		fmt.Printf("Balance of Address 1: %s\n", balance1.String())
 		fmt.Printf("Balance of Address 2: %s\n", balance2.String())
 
-	
+		key2, _ := importKeys()
+
+		
+		fmt.Printf(hexutil.Encode(crypto.FromECDSA(key2.PrivateKey)))
+
 		// Send the transaction
-		sendTransaction(infuraURL, address1, address2)
+		//sendTransaction(infuraURL, address1, address2)
 }
